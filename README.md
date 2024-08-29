@@ -50,7 +50,7 @@ dotnet run
 The app deleted the resources it created. You can delete all of the resources created for this demo by using the following command. You need to confirm that you want to delete the resources.
 
 ```bash
-az group delete --name az204-blob-rg --no-wait
+az group delete --name azure-blob-demo-rg --no-wait
 ```
 
 ## License
