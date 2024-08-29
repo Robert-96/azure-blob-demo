@@ -1,12 +1,13 @@
 ﻿using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
 
-Console.WriteLine("Azure Blob Storage exercise\n");
+Console.WriteLine("Azure Blob Storage Demo\n");
 
 // Run the examples asynchronously, wait for the results before proceeding
 ProcessAsync().GetAwaiter().GetResult();
 
 Console.WriteLine("Press enter to exit the sample application.");
+Console.Write(">");
 Console.ReadLine();
 
 static async Task ProcessAsync()
@@ -21,7 +22,7 @@ static async Task ProcessAsync()
     // Create a client that can authenticate with a connection string
     BlobServiceClient blobServiceClient = new BlobServiceClient(storageConnectionString);
 
-    //Create a unique name for the container
+    // Create a unique name for the container
     string containerName = "wtblob" + Guid.NewGuid().ToString();
 
     // Create the container and return a container client object
@@ -30,7 +31,9 @@ static async Task ProcessAsync()
         "\nTake a minute and verify in the portal." +
         "\nNext a file will be created and uploaded to the container.");
     Console.WriteLine("Press 'Enter' to continue.");
+    Console.Write(">");
     Console.ReadLine();
+
 
     // Create a local file in the ./data/ directory for uploading and downloading
     string localPath = "./data/";
@@ -55,7 +58,9 @@ static async Task ProcessAsync()
     Console.WriteLine("\nThe file was uploaded. We'll verify by listing" +
             " the blobs next.");
     Console.WriteLine("Press 'Enter' to continue.");
+    Console.Write(">");
     Console.ReadLine();
+
 
     // List blobs in the container
     Console.WriteLine("Listing blobs...");
@@ -68,7 +73,9 @@ static async Task ProcessAsync()
             "container in the portal." +
             "\nNext the blob will be downloaded with an altered file name.");
     Console.WriteLine("Press 'Enter' to continue.");
+    Console.Write(">");
     Console.ReadLine();
+
 
     // Download the blob to a local file
     // Append the string "DOWNLOADED" before the .txt extension
@@ -86,7 +93,9 @@ static async Task ProcessAsync()
     Console.WriteLine("\nLocate the local file in the data directory created earlier to verify it was downloaded.");
     Console.WriteLine("The next step is to delete the container and local files.");
     Console.WriteLine("Press 'Enter' to continue.");
+    Console.Write(">");
     Console.ReadLine();
+
 
     // Delete the container and clean up local files created
     Console.WriteLine("\n\nDeleting blob container...");
