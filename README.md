@@ -4,8 +4,6 @@ A simple demo that uses the Azure Blob Storage client library.
 
 ## Setup
 
-### Azure Storage Account
-
 Perform the following actions to prepare Azure, and your local environment, for the exercise.
 
 1. Sign in to Azure by using the following command. A browser window should open letting you choose which account to sign in with.
@@ -49,10 +47,13 @@ dotnet run
 
 ## CleanUp
 
-### Azure Storage Account
-
-The app deleted the resources it created. You can delete all of the resources created for this exercise by using the following command. You need to confirm that you want to delete the resources.
+The app deleted the resources it created. You can delete all of the resources created for this demo by using the following command. You need to confirm that you want to delete the resources.
 
 ```bash
 az group delete --name az204-blob-rg --no-wait
 ```
+
+## License
+
+
+This project is licensed under the [MIT License](LICENSE).
